@@ -9,10 +9,16 @@ import java.math.BigDecimal;
 
 @AllArgsConstructor
 @Getter
-public class AddBalanceDTO {
+public class TransactionDTO {
 
-    @Min(0)
     @NotNull
-    private BigDecimal balance;
+    private Long payerID;
+
+    @NotNull
+    private Long payeeID;
+
+    @Min(value = 0)
+    @NotNull
+    private BigDecimal amount;
 
 }
